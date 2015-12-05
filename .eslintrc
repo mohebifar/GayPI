@@ -1,0 +1,6 @@
+{
+  "extends": "airbnb",
+  "ecmaFeatures": {
+    "generators": 1
+  }
+}
