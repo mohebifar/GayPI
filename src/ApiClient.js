@@ -8,7 +8,7 @@ import { users as usersEndpoints } from './helpers/endpoints';
  * @param response
  * @returns {*}
  */
-function checkStatus(response) {
+function checkStatus(response: any) {
   if (response.status >= 200 && response.status < 300) {
     return response;
   }
@@ -23,7 +23,7 @@ function checkStatus(response) {
  * @param response
  * @returns {Promise}
  */
-function parseJSON(response) {
+function parseJSON(response: object) {
   return response.json();
 }
 
@@ -33,7 +33,7 @@ function parseJSON(response) {
  * @param route {String}
  * @returns {String}
  */
-function prepareUrl(route) {
+function prepareUrl(route: string) {
   return `https://api.github.com${ route }`;
 }
 
@@ -57,7 +57,7 @@ export default class ApiClient {
    * @param options {Object}
    * @returns {Promise}
    */
-  fetch(url, options = {}) {
+  fetch(url: string, options = {}) {
     options.headers = options.headers || {};
     options.headers.Accept = 'application/json';
 
